@@ -28,15 +28,6 @@ class _ListScreenState extends State<ListScreen> {
     });
   }
 
-  void _updateCliente(String id) async {
-    String response = await _api.getById(id);
-    var cliente = jsonDecode(response);
-    String newBalance = (cliente['balance'] + 100).toString();
-    String body = '{"name": "${cliente['name']}", "balance": $newBalance}';
-    await _api.put(id, body);
-    _fetchtransacoes();
-  }
-
   void _deleteCliente(String id) async {
     await _api.delete(id);
     _fetchtransacoes();

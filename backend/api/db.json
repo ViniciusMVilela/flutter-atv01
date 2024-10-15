@@ -1,13 +1,8 @@
 {
   "transacoes": [
     {
-      "id": "1",
-      "name": "Joaquim",
-      "balance": 1000
-    },
-    {
       "name": "Maria",
-      "balance": 850,
+      "balance": 1250,
       "id": "2"
     }
   ]
